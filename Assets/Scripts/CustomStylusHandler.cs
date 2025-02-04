@@ -29,6 +29,8 @@ public class CustomStylusHandler : MonoBehaviour
     private bool _previousDockedValue;
 
 
+
+
     private const string InkPoseRight = "aim_right";
     private const string InkPoseLeft = "aim_left";
     private const string InkHapticPulse = "haptic_pulse";
