@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 using System.Collections.Generic;
 using JetBrains.Annotations;
@@ -36,7 +37,9 @@ public class CustomLineDrawing : MonoBehaviour
     //Unity event exposed in inspector; Calls some aditional logic later on
     [SerializeField]
     private UnityEvent onFadeToggled = new();
-
+    
+    [SerializeField] 
+    private ColorPicker colorPicker;
     //Tracks different interaction states
     private enum AppMode
     {
@@ -65,6 +68,10 @@ public class CustomLineDrawing : MonoBehaviour
         Color.black
     }; // Array of colors to cycle through
     private int colorIndex = 0; // Index to keep track of the current color
+    private Color customColor = Color.black; // Custom color to be used
+    
+    private Coroutine _longPressCoroutine;
+    private bool _isLongPressFront;
 
     //Ensures spacing between consecutive points on each line
     private const float MinDistanceBetweenLinePoints = 0.0005f;
@@ -195,31 +202,6 @@ public class CustomLineDrawing : MonoBehaviour
         // finally write the curve back to the line
         _currentLine.widthCurve = curve;
     }
-
-    /*
-     //OLD
-    //Adds points to the line when the user clicks while moving/draws with the stylus
-    private void AddPointToLine(Vector3 position, float pressure)
-    {
-        //Checkss to ensure minimum line distance is maintained between points
-        if (Vector3.Distance(position, _previousLinePoint) >= MinDistanceBetweenLinePoints) return;
-        //If distance is acceptable, adds new point to the line at the current position
-        _previousLinePoint = position;
-        _currentLine.positionCount++;
-        //Adjusts line width at the current point based on stylus pressure
-        _currentLineWidths.Add(Math.Max(pressure * maxLineWidth, minLineWidth));
-        _currentLine.SetPosition(_currentLine.positionCount - 1, position);
-
-        //Uses animation curve to update the lines width along its length, making it more visually responsive to the user.
-        var curve = new AnimationCurve();
-        for (var i = 0; i < _currentLineWidths.Count; i++)
-        {
-            curve.AddKey(i / (float)_currentLineWidths.Count - 1, _currentLineWidths[i]);
-        }
-
-        _currentLine.widthCurve = curve;
-    }
-*/
 
     //Checks weather the user is currently drawing; if active (Pressure from tip || Middle Button > 0, the user is drawing)
     private void Update()
@@ -390,7 +372,7 @@ public class CustomLineDrawing : MonoBehaviour
         }
 
         _grabStartPosition = customStylusHandler.Stylus.inkingPose.position;
-        _grabStartRotation = customStylusHandler.Stylus.inkingPose.rotation;
+        //_grabStartRotation = customStylusHandler.Stylus.inkingPose.rotation;
 
         // Optionally, you can also store the original rotation of the line
         var transformComponent = _highlightedLine.transform;
@@ -480,13 +462,56 @@ public class CustomLineDrawing : MonoBehaviour
     # endregion
     # region EVENT HANDLER METHODS
 
-    //Event handler for Pressing the handle front button
-    //Starts grabbing the line when the stylus is pressed.
+    //Event handler for releasing the handle front button
+    //Stops grabbing the line when the stylus is released.
     private void HandleFrontPressed()
     {
+        // Reset the long press flag and start checking
+        _isLongPressFront = false;
+        _longPressCoroutine = StartCoroutine(FrontLongPressCheck());
+
+        // If we're highlighted, start grabbing the line
         if (_currentMode == AppMode.Highlighted)
         {
             StartGrabbingLine();
+        }
+    }
+    
+    private IEnumerator FrontLongPressCheck()
+    {
+        yield return new WaitForSeconds(1f);
+        _isLongPressFront = true;
+        // Show the color picker UI after 1 second
+        if (colorPicker is not null)
+        {
+            colorPicker.ShowPicker();
+        }
+    }
+
+    
+    private void HandleFrontReleased()
+    {
+        // Cancel the long press coroutine if still running
+        if (_longPressCoroutine != null)
+        {
+            StopCoroutine(_longPressCoroutine);
+            _longPressCoroutine = null;
+        }
+
+        // If we were grabbing, stop grabbing
+        if (_currentMode == AppMode.Grabbing)
+        {
+            StopGrabbingLine();
+        }
+
+        // On release, if long press was active, use the ColorPicker to pick a color from the environment.
+        if (_isLongPressFront)
+        {
+            if (colorPicker != null)
+            {
+                colorPicker.PickColor();
+                colorPicker.HidePicker();
+            }
         }
         else
         {
@@ -494,15 +519,6 @@ public class CustomLineDrawing : MonoBehaviour
         }
     }
 
-    //Event handler for releasing the handle front button
-    //Stops grabbing the line when the stylus is released.
-    private void HandleFrontReleased()
-    {
-        if (_currentMode == AppMode.Grabbing)
-        {
-            StopGrabbingLine();
-        }
-    }
 
     //Event handler for pressing the handle back button
     //Deletes the highlighted line(if any) when the stylus back button is pressed.
