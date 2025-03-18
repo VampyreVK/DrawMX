@@ -506,9 +506,8 @@ public class CustomLineDrawing : MonoBehaviour
         {
             StopGrabbingLine();
         }
-
         // On release, if long press was active, use the ColorPicker to pick a color from the environment.
-        if (_isLongPressFront)
+        else if (_isLongPressFront)
         {
             if (colorPicker != null)
             {

@@ -88,9 +88,9 @@ public class ColorPicker : MonoBehaviour
         {
             _manualRenderer = manualSamplingOrigin.GetComponent<Renderer>();
         }
-
         SetupLineRenderer();
         StartCoroutine(WaitForWebCam());
+        manualSamplingObject.SetActive(false);
     }
 
     private IEnumerator WaitForWebCam()
