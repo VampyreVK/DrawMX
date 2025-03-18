@@ -89,6 +89,9 @@ public class CustomLineDrawing : MonoBehaviour
     private Vector3[] _originalLinePositions;
     //Stores previous total line length
     private float _previousLineLength;
+    
+    private Quaternion _grabStartStylusRotation;
+    private Quaternion _grabStartLineRotation;
 
     //Sets original line color on stylus; registers events on object creation
     private void Awake()
@@ -138,9 +141,10 @@ public class CustomLineDrawing : MonoBehaviour
         _currentLine.receiveShadows = false;
         //Stores new line in lines list
         _lines.Add(lineObject);
-        //Records starting point in the previous line point width
-        _previousLinePoint = Vector3.zero;
+        // Set _previousLinePoint to the current stylus position to skip the erroneous first point
+        _previousLinePoint = customStylusHandler.Stylus.inkingPose.position;
         //Resets current line widths list to prepare for new line
+        
         _currentLineWidths.Clear();
     }
 
@@ -163,7 +167,7 @@ public class CustomLineDrawing : MonoBehaviour
         if (_currentLine.positionCount == 1)
         {
             // First point => simply set the first keyframe
-            curve.MoveKey(0, new Keyframe(0f, pressure));
+            curve.MoveKey(0, new Keyframe(0f, Math.Max(pressure * maxLineWidth, minLineWidth)));
         }
         else
         {
@@ -373,10 +377,14 @@ public class CustomLineDrawing : MonoBehaviour
 
         _grabStartPosition = customStylusHandler.Stylus.inkingPose.position;
         //_grabStartRotation = customStylusHandler.Stylus.inkingPose.rotation;
-
+        _grabStartStylusRotation = customStylusHandler.Stylus.inkingPose.rotation;
         // Optionally, you can also store the original rotation of the line
         var transformComponent = _highlightedLine.transform;
         _grabStartRotation = transformComponent.rotation;
+        
+        //Update pen color to match grabbed line (Remove if making the color picker work with existing lines)
+        lineColor = _cachedColor;
+        tipIndicator.material.color = lineColor;
     }
 
     //TODO: Fix Me???
@@ -386,7 +394,6 @@ public class CustomLineDrawing : MonoBehaviour
         if (!_highlightedLine) return;
 
         _currentMode = AppMode.Idle;
-
         // Reset the original rotation of the line if needed
         var transformComponent = _highlightedLine.transform;
         transformComponent.rotation = _grabStartRotation;
@@ -397,15 +404,20 @@ public class CustomLineDrawing : MonoBehaviour
     private void MoveHighlightedLine()
     {
        if (!_highlightedLine) return;
-       //Set rotation to rotation of stylus offset by the original rotation difference from the grab start.
-       var rotation = customStylusHandler.Stylus.inkingPose.rotation * Quaternion.Inverse(_grabStartRotation);
+       
+       // Compute the rotation delta based on the stylus movement
+       Quaternion rotationDelta = customStylusHandler.Stylus.inkingPose.rotation * Quaternion.Inverse(_grabStartStylusRotation);
+       // Determine the new rotation for the line by applying the delta to the original line rotation
+       Quaternion newLineRotation = rotationDelta * _grabStartLineRotation;
+       _highlightedLine.transform.rotation = newLineRotation;
+       
        var lineRenderer = _highlightedLine.GetComponent<LineRenderer>();
        //Array for new line positions
        var newPositions = new Vector3[_originalLinePositions.Length];
        //Calculate the new positions and translating each position relative to the stylus offset by the distance from the grab start.
        for (int i = 0; i < _originalLinePositions.Length; i++)
        {
-           newPositions[i] = rotation * (_originalLinePositions[i] - _grabStartPosition) + customStylusHandler.Stylus.inkingPose.position;
+           newPositions[i] = rotationDelta * (_originalLinePositions[i] - _grabStartPosition) + customStylusHandler.Stylus.inkingPose.position;
        }
 
        //Update the LineRenderer with the new positions.
