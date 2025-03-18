@@ -430,7 +430,6 @@ public class CustomLineDrawing : MonoBehaviour
         }
         else
         {
-
             // Cycle through the colors array
             lineColor = colors[colorIndex];
             tipIndicator.material.color = lineColor;
@@ -468,12 +467,16 @@ public class CustomLineDrawing : MonoBehaviour
     {
         // Reset the long press flag and start checking
         _isLongPressFront = false;
-        _longPressCoroutine = StartCoroutine(FrontLongPressCheck());
+        
 
         // If we're highlighted, start grabbing the line
         if (_currentMode == AppMode.Highlighted)
         {
             StartGrabbingLine();
+        }
+        else
+        {
+            _longPressCoroutine = StartCoroutine(FrontLongPressCheck());
         }
     }
     
@@ -509,7 +512,8 @@ public class CustomLineDrawing : MonoBehaviour
         {
             if (colorPicker != null)
             {
-                colorPicker.PickColor();
+                lineColor = colorPicker.PickColor();
+                tipIndicator.material.color = lineColor;
                 colorPicker.HidePicker();
             }
         }

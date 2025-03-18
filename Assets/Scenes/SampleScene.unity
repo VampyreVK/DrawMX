@@ -1272,13 +1272,29 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 329843572644768346, guid: 6cd586eff942d7b499b44657ba836d0b, type: 3}
+      propertyPath: samplingMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 329843572644768346, guid: 6cd586eff942d7b499b44657ba836d0b, type: 3}
       propertyPath: raySampleOrigin
       value: 
       objectReference: {fileID: 1495159295}
     - target: {fileID: 329843572644768346, guid: 6cd586eff942d7b499b44657ba836d0b, type: 3}
+      propertyPath: manualSamplingObject
+      value: 
+      objectReference: {fileID: 1828601335}
+    - target: {fileID: 329843572644768346, guid: 6cd586eff942d7b499b44657ba836d0b, type: 3}
       propertyPath: manualSamplingOrigin
       value: 
-      objectReference: {fileID: 2112812995}
+      objectReference: {fileID: 2112812996}
+    - target: {fileID: 329843572644768346, guid: 6cd586eff942d7b499b44657ba836d0b, type: 3}
+      propertyPath: manualSamplingMaterial
+      value: 
+      objectReference: {fileID: -166414582247098342, guid: 4f994eda74dc80f4f8516de32d7b4515, type: 3}
+    - target: {fileID: 611158415039513400, guid: 6cd586eff942d7b499b44657ba836d0b, type: 3}
+      propertyPath: _cameraRig
+      value: 
+      objectReference: {fileID: 986644983}
     - target: {fileID: 6035143794370752181, guid: 6cd586eff942d7b499b44657ba836d0b, type: 3}
       propertyPath: m_Name
       value: Color Picker
@@ -1422,6 +1438,11 @@ Transform:
   - {fileID: 1225180376}
   m_Father: {fileID: 1962065680}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1828601335 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3516388772875907493, guid: d8fa5000caa92ac4eb7804a521a6d68d, type: 3}
+  m_PrefabInstance: {fileID: 2112812994}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1862812733
 GameObject:
   m_ObjectHideFlags: 0
@@ -1641,6 +1662,18 @@ PrefabInstance:
     m_TransformParent: {fileID: 1495159295}
     m_Modifications:
     - target: {fileID: 1024462091929600750, guid: d8fa5000caa92ac4eb7804a521a6d68d, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.0025
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024462091929600750, guid: d8fa5000caa92ac4eb7804a521a6d68d, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.0025
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024462091929600750, guid: d8fa5000caa92ac4eb7804a521a6d68d, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.0025
+      objectReference: {fileID: 0}
+    - target: {fileID: 1024462091929600750, guid: d8fa5000caa92ac4eb7804a521a6d68d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -1680,6 +1713,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1244100346425664854, guid: d8fa5000caa92ac4eb7804a521a6d68d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.889
+      objectReference: {fileID: 0}
+    - target: {fileID: 1244100346425664854, guid: d8fa5000caa92ac4eb7804a521a6d68d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.892
+      objectReference: {fileID: 0}
     - target: {fileID: 3516388772875907493, guid: d8fa5000caa92ac4eb7804a521a6d68d, type: 3}
       propertyPath: m_Name
       value: Manual Sampling Origin & Color Indicator
@@ -1692,6 +1733,11 @@ PrefabInstance:
 --- !u!4 &2112812995 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1024462091929600750, guid: d8fa5000caa92ac4eb7804a521a6d68d, type: 3}
+  m_PrefabInstance: {fileID: 2112812994}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &2112812996 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 6542355336222112409, guid: d8fa5000caa92ac4eb7804a521a6d68d, type: 3}
   m_PrefabInstance: {fileID: 2112812994}
   m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807

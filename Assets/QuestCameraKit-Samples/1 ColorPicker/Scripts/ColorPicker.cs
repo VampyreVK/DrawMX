@@ -17,8 +17,10 @@ public class ColorPicker : MonoBehaviour
     [SerializeField] private Transform raySampleOrigin;
     [SerializeField] private LineRenderer lineRenderer;
 
-    [Header("Manual Sampling")]
+    [Header("Manual Sampling")] [SerializeField]
+    private GameObject manualSamplingObject;
     [SerializeField] private Transform manualSamplingOrigin;
+    [SerializeField] private Material manualSamplingMaterial;
 
     [Header("Brightness Correction")]
     [SerializeField, Range(0f, 1f)] private float targetBrightness = 0.8f;
@@ -39,19 +41,21 @@ public class ColorPicker : MonoBehaviour
     public void ShowPicker()
     {
         gameObject.SetActive(true);
+        manualSamplingObject.SetActive(true);
     }
 
     public void HidePicker()
     {
         gameObject.SetActive(false);
+        manualSamplingObject.SetActive(false);
     }
     
-    public void PickColor()
+    public Color PickColor()
     {
         if (_lastHitPoint == null || !_webcamTexture || !_webcamTexture.isPlaying)
         {
             Debug.LogWarning("ColorPicker: Invalid sampling point or webcam texture not ready.");
-            return;
+            return Color.white;
         }
 
         var uv = WorldToTextureUV(_lastHitPoint.Value);
@@ -61,6 +65,8 @@ public class ColorPicker : MonoBehaviour
         {
             _manualRenderer.material.color = color;
         }
+
+        return color;
     }
 
     
@@ -117,6 +123,7 @@ public class ColorPicker : MonoBehaviour
             if (_manualRenderer is not null)
             {
                 _manualRenderer.material.color = previewColor;
+                manualSamplingMaterial.color = previewColor;
             }
         }
     }
