@@ -6,7 +6,110 @@
   <component name="ChangeListManager">
     <list default="true" id="0497e923-7aa8-4958-84c2-19737bb3d520" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.MX Ink Drawing App Demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.MX Ink Drawing App Demo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CustomStylusHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CustomStylusHandler.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ArtifactDB-lock" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB-lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/1300b0aE-inputdata.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1300b0aE-inputdata.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/1300b0aE.dag" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1300b0aE.dag" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/1300b0aE.dag.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1300b0aE.dag.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/1300b0aE.dag.outputdata" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1300b0aE.dag.outputdata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/1300b0aE.dag.payloads" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1300b0aE.dag.payloads" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/1300b0aE.dag_derived" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1300b0aE.dag_derived" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/1300b0aE.dag_fsmtime" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/1300b0aE.dag_fsmtime" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/1300b0aESkipCompile-inputdata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/1300b0aESkipCompile.dag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/1300b0aESkipCompile.dag.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/1300b0aESkipCompile.dag.outputdata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/1300b0aESkipCompile.dag.payloads" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/1300b0aESkipCompile.dag_derived" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/1300b0aESkipCompile.dag_fsmtime" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/1300b0aP-inputdata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/1300b0aP.dag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/1300b0aP.dag.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/1300b0aP.dag.outputdata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/1300b0aP.dag.payloads" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/1300b0aP.dag_derived" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/1300b0aP.dag_fsmtime" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/Player69518480-inputdata.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/Player69518480.dag" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/Player69518480.dag.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/Player69518480.dag.outputdata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/Player69518480.dag.payloads" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/Player69518480.dag_derived" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/Player69518480.dag_fsmtime" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/AssistantCoreSDKRuntime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/AssistantVoiceCommandCommon.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Meta.Net.endel.nativewebsocket.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Meta.Voice.Hub.Runtime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Meta.Voice.NLayer.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Meta.Voice.Opus.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Meta.VoiceSDK.Mic.Common.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Meta.VoiceSDK.Mic.Other.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Meta.Wit.Composer.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Meta.Wit.Dictation.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Meta.WitAi.Conduit.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Meta.WitAi.Lib.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Meta.WitAi.TTS.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Meta.WitAi.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Meta.XR.Audio.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Meta.XR.BuildingBlocks.DepthAPI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Meta.XR.BuildingBlocks.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Meta.XR.EnvironmentDepth.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Meta.XR.ImmersiveDebugger.Interface.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Meta.XR.ImmersiveDebugger.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Meta.XR.MultiplayerBlocks.Shared.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Oculus.Haptics.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Oculus.Interaction.OVR.Samples.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Oculus.Interaction.OVR.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Oculus.Interaction.Samples.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Oculus.Interaction.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Oculus.Platform.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Oculus.VR.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Unity.AI.Navigation.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Unity.TextMeshPro.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Unity.Timeline.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Core.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.Flow.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Unity.VisualScripting.State.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Unity.XR.Management.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/Unity.XR.Oculus.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/UnityEngine.SpatialTracking.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/UnityEngine.TestRunner.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/UnityEngine.UI.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/VoiceSDK.Dictation.Runtime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/VoiceSDK.Runtime.Composer.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/VoiceSDK.Runtime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/VoiceSDK.Telemetry.Runtime.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/PlayerScriptAssemblies/meta.xr.mrutilitykit.dll" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/TundraBuildState.state" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/TundraBuildState.state" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/TundraBuildState.state.map" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/TundraBuildState.state.map" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/backend1.traceevents" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/backend1.traceevents" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/backend2.traceevents" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/backend2.traceevents" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/backend3.traceevents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/backend4.traceevents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/bee_backend.info" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/bee_backend.info" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/buildprogram0.traceevents" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/buildprogram0.traceevents" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/buildprogram1.traceevents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/buildprogram2.traceevents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/buildreport.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/buildreport.json_0.traceevents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/buildreport.json_1.traceevents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/buildreport.json_2.traceevents" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/fullprofile.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/fullprofile.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/tundra.digestcache" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/tundra.digestcache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/tundra.log.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Bee/tundra.log.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Bee/tundra.scancache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/EditorUserBuildSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/EditorUserBuildSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Meta/OVRLocalProjectSettingsData.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Meta/OVRLocalProjectSettingsData.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Search/transactions.db" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Search/transactions.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ShaderCache.db" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ShaderCache.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB-lock" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB-lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/com.unity.ide.rider/PersistedState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/com.unity.ide.rider/PersistedState.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/ilpp.pid" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ilpp.pid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-Editor.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-firstpass.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp-firstpass.csproj.AssemblyReference.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/obj/Debug/Assembly-CSharp.csproj.AssemblyReference.cache" afterDir="false" />
     </list>
@@ -30,23 +133,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "main",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.46f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.58f1/Unity.app/Contents/MacOS/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-projectPath &quot;$PROJECT_DIR$&quot; -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -54,7 +157,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
-      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.46f1/Unity.app/Contents/MacOS/Unity" />
+      <option name="EXE_PATH" value="/Applications/Unity/Hub/Editor/2022.3.58f1/Unity.app/Contents/MacOS/Unity" />
       <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath &quot;$PROJECT_DIR$&quot; -testResults Logs/results.xml -logFile Logs/Editor.log -testPlatform EditMode -debugCodeOptimization" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="PASS_PARENT_ENVS" value="1" />
@@ -104,6 +207,9 @@
       <workItem from="1738083022493" duration="7616000" />
       <workItem from="1738124085836" duration="9000" />
       <workItem from="1738124107557" duration="755000" />
+      <workItem from="1742339800565" duration="130000" />
+      <workItem from="1742339960401" duration="1606000" />
+      <workItem from="1743615253607" duration="7000" />
     </task>
     <servers />
   </component>
